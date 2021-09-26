@@ -1,0 +1,68 @@
+
+body{
+	position:relative;
+}
+
+.card {
+    border-radius: 4px;
+    background: red;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .5s transform cubic-bezier(.155,1.105,.295,1.12),.4s box-shadow,.4s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  padding: 10px 75px 20px 35px;
+  cursor: pointer;
+}
+h2:hover{
+	text-decoration: underline;     
+    text-decoration-color: skyblue; 
+}
+.card:hover {
+     transform: scale(1.05);
+     transform-origin:right;
+
+}
+#updateCard:hover{
+	transform: scale(1.05);
+	 position:relative;
+}
+#Images:hover{
+	 transform: scale(1.05);
+	 position:relative;
+}
+@media(max-width: 990px){
+  .card{
+    margin: 30px;
+  }
+}
+
+.show{
+	transform:translateY(150px);
+	opacity:0;
+	transition: all 2s ease;
+}
+.show.active{
+	transform:translateY(0px);
+	animation:easyMoving 2s ease;
+	opacity:1;
+}
+
+.scrollable{
+	height:400px;
+	overflow:scroll;
+	width:100%;
+}
+.table-fixed .col{
+	width:35%;
+}
+.table-fixed th{
+	width:25%;
+}
+@keyframes easyMoving{
+	 0%   { left:0px; top:0px;}
+  25%  { left:200px; top:0px;}
+}
+
+
+
+
+
+
